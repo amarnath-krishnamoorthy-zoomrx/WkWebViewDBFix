@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+ <body onload= "db();">
+     This is a simple html page to test WKWebView.
+</body>
+
+<script>
+function db() {
+try {
+        if(!window.openDatabase) {
+            window.webkit.messageHandlers.handlerName.postMessage({"error":"no db"});
+        } else {
+            var surveyDB = window.openDatabase("theShortName", 1.0, "thedisplayName", 65536);
+            window.webkit.messageHandlers.handlerName.postMessage({"dbCreated":1});
+        }
+      } catch(e) {
+      window.webkit.messageHandlers.handlerName.postMessage({"error":e.message});
+        return;
+      }
+}
+</script>
+</html>

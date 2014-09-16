@@ -13,6 +13,8 @@
 		25B4603519C72DA80094557E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25B4603319C72DA80094557E /* Main.storyboard */; };
 		25B4603719C72DA80094557E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25B4603619C72DA80094557E /* Images.xcassets */; };
 		25B4604319C72DA80094557E /* WkWebViewDBFixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B4604219C72DA80094557E /* WkWebViewDBFixTests.m */; };
+		25B4604D19C72DCD0094557E /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 25B4604C19C72DCD0094557E /* index.html */; };
+		25B4604F19C72F6A0094557E /* Databases.db in Resources */ = {isa = PBXBuildFile; fileRef = 25B4604E19C72F6A0094557E /* Databases.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		25B4603C19C72DA80094557E /* WkWebViewDBFixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WkWebViewDBFixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25B4604119C72DA80094557E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25B4604219C72DA80094557E /* WkWebViewDBFixTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WkWebViewDBFixTests.m; sourceTree = "<group>"; };
+		25B4604C19C72DCD0094557E /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		25B4604E19C72F6A0094557E /* Databases.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Databases.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 		25B4602919C72DA80094557E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				25B4604E19C72F6A0094557E /* Databases.db */,
+				25B4604C19C72DCD0094557E /* index.html */,
 				25B4602A19C72DA80094557E /* Info.plist */,
 				25B4602B19C72DA80094557E /* main.m */,
 			);
@@ -196,6 +202,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25B4604F19C72F6A0094557E /* Databases.db in Resources */,
+				25B4604D19C72DCD0094557E /* index.html in Resources */,
 				25B4603519C72DA80094557E /* Main.storyboard in Resources */,
 				25B4603719C72DA80094557E /* Images.xcassets in Resources */,
 			);

@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <WebKit/WebKit.h>
+
+#define APPLICATION_DOC_DIRECTORY                   [NSString stringWithFormat:@"%@", [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]]
 
 @interface AppDelegate ()
 
@@ -17,7 +20,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self copyDatabasesDBFile];
     return YES;
+}
+
+-(void)copyDatabasesDBFile
+{
+    [WKWebView new];
+    NSString* libraryDir = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *masterDbFilePath = [libraryDir stringByAppendingPathComponent:[NSString stringWithFormat:@"WebKit/%@/WebsiteData/WebSQL/Databases.db", [[NSBundle mainBundle] bundleIdentifier]]];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:masterDbFilePath]) {
+        [[NSFileManager defaultManager] copyItemAtPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Databases.db"] toPath:masterDbFilePath error:nil];
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

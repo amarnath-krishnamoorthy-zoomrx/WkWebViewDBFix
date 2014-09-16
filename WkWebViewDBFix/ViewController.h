@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<WKScriptMessageHandler>
+
+@property(nonatomic, strong) WKWebView *nextWkView;
 
 
 @end
